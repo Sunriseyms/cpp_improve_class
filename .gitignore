@@ -1,0 +1,8 @@
+.idea/*
+
+.vscode/*
+!.vscode/settings.json
+
+build/
+*.tar
+*.tar.gz
