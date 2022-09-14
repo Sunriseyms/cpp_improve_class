@@ -1,2 +1,2 @@
-# c-_improve_class
+# cpp_improve_class
 learn c++
