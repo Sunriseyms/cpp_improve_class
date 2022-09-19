@@ -1,4 +1,5 @@
 add_subdirectory(yms)
 add_subdirectory(caoy)
 add_subdirectory(zhaofy)
+add_subdirectory(gaos)
 add_subdirectory(liuxd)
