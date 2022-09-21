@@ -18,12 +18,22 @@ clog有缓冲区，存储路径和cerr相同。。
         如果main return 0, 则echo的结果为0，如果main return -1，则echo结果为255。
 
   3. cout 设置格式 操作符
+    ```
+    std::cout << std::hex << 1 << std::dec << std::endl;
+    ```
+    操作符会持续起作用，直到遇到下一个操作符，本例中为std::dec;
+
   4. 类若想使用cin,cout,需要输入输出重载 >> 或者 << , 参考14章第二节
+   ```
+   std::cin >> item;
+   #等效于 operator>>(std::cin,item) 或 std::cin.>>(item)
+   #自定义类若没有重载>>运算符，编译阶段就会因为找不到对应的 >>函数而报错
+   ```
   5. 程序运行main之前，会执行所有全局变量的创建，析构在main执行后。也可以通过注册将某些函数的执行提到main函数之前
   6. CMakeList 和 g++的关系：CMakeList生成makefile，makefile调用g++或gcc等编译器来生成程序。CMakeList的好处在于封装方便。编译的全局变量只属于g++或gcc,只不过相当于CMakeList层层传参，头文件的链接也是g++等编辑器完成。
   7.  问：makefile中全局的宏定义没有在CMakeList中找到，这种宏定义如何设置？
     答：CMakelist中的都会对应到makefile中的定义。
-  8. CMakeList中的变量可以通过message命令查看c
+  8. CMakeList中的变量可以通过message命令查看
 
   9.  编译的四个阶段：预处理、编译、汇编、链接
 
