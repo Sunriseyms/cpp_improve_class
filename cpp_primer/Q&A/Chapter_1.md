@@ -23,10 +23,17 @@ clog有缓冲区，存储路径和cerr相同。。
   6. CMakeList 和 g++的关系：CMakeList生成makefile，makefile调用g++或gcc等编译器来生成程序。CMakeList的好处在于封装方便。编译的全局变量只属于g++或gcc,只不过相当于CMakeList层层传参，头文件的链接也是g++等编辑器完成。
   7.  问：makefile中全局的宏定义没有在CMakeList中找到，这种宏定义如何设置？
     答：CMakelist中的都会对应到makefile中的定义。
-  8. CMakeList中的变量可以通过message命令查看
+  8. CMakeList中的变量可以通过message命令查看c
+
   9.  编译的四个阶段：预处理、编译、汇编、链接
+
+
    ![](img/Compilation%20process.PNG)
+
+
   10. 链接：
+
+
    ![](img/Linking.PNG)
 
 
