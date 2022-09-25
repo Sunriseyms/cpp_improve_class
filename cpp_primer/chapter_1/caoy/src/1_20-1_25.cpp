@@ -9,19 +9,19 @@ int main() {
   std::cin >> item;
   std::cout << item << std::endl;
 
-  std::cout << std::endl << "Exercise 1.20" << std::endl;
+  std::cout << std::endl << "Exercise 1.21" << std::endl;
   std::cout << "Please enter two sale records, format: isbn  number of book sold  unit price" << std::endl;
   Sales_item item1, item2;
   std::cin >> item1 >> item2;
   if (item1.isbn() == item2.isbn()) { std::cout << "Sum is: " << item1 + item2 << std::endl; }
 
-  std::cout << std::endl << "Exercise 1.20" << std::endl;
+  std::cout << std::endl << "Exercise 1.22" << std::endl;
   std::cout << "Please enter some sale records, format: isbn  number of book sold  unit price" << std::endl;
   Sales_item sum, cur_item;
   while (std::cin >> cur_item) { sum += cur_item; }
   std::cout << "Sum is: " << sum << std::endl;
 
-  std::cout << std::endl << "Exercise 1.21" << std::endl;
+  std::cout << std::endl << "Exercise 1.23" << std::endl;
   std::cout << "Please enter some sale records, format: isbn  number of book sold  unit price" << std::endl;
   Sales_item last_book;
   Sales_item cur_book;
