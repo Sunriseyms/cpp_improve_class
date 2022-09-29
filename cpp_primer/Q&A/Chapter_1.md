@@ -38,13 +38,13 @@ clog有缓冲区，存储路径和cerr相同。。
   9.  编译的四个阶段：预处理、编译、汇编、链接
 
 
-   ![](img/Compilation%20process.PNG)
+   ![](img/chap1/Compilation%20process.PNG)
 
 
   10. 链接：
 
 
-   ![](img/Linking.PNG)
+   ![](img/chap2/Linking.PNG)
 
 
 - 代办问题

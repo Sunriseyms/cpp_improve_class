@@ -54,7 +54,7 @@
       const int a = 25;
       const int * const b = &a;
       ```
-  6. 声明（declaration）与定义（definition）的区别：声明使得名字为程序所知；定义负责创建与名字关联的实体。（在头文件声明的变量仅仅是声明 @yangms@zhaofy 解释清楚）
+  6. 声明（declaration）与定义（definition）的区别：声明使得名字为程序所知；定义负责创建与名字关联的实体。声明应该是使用extern这种方式；如果在头文件中使用int i，也是既声明也定义了i。
   7. const引用可以绑定到右值
   8. 每个用了const对象的文件都必须能够访问到它的初始值
 
@@ -68,6 +68,8 @@
   12. 创建类时的注意事项
    1）合理区分公/私有成员和公/私有成员函数
    2）成员函数作用仅为Get成员的值时，定义函数时标明const。且为了增加可读性，尽量直接返回该成员。
+  13. 为什么要有引用？
+    ![](img/chap2/reference.png)
 
   14. 关于声明和定义：关于声明和定义，大家可以读《C++程序设计语言  第1-3部分》（路径：[/cpp_primer/book/](https://xiaopeng.feishu.cn/drive/folder/fldcnEok30BPHEiFbUd09hcdCTh)）的6.3章节 和15章；这本书是C++之父写的，可以更好的理解背后的设计理念
    ![](img/chap2/reference.png)
