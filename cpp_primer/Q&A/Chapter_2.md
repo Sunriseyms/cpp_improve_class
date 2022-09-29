@@ -68,3 +68,6 @@
   12. 创建类时的注意事项
    1）合理区分公/私有成员和公/私有成员函数
    2）成员函数作用仅为Get成员的值时，定义函数时标明const。且为了增加可读性，尽量直接返回该成员。
+
+  14. 关于声明和定义：关于声明和定义，大家可以读《C++程序设计语言  第1-3部分》（路径：[/cpp_primer/book/](https://xiaopeng.feishu.cn/drive/folder/fldcnEok30BPHEiFbUd09hcdCTh)）的6.3章节 和15章；这本书是C++之父写的，可以更好的理解背后的设计理念
+   ![](img/chap2/reference.png)
