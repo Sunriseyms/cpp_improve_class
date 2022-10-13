@@ -34,3 +34,5 @@
 
   12. 建议放在头文件的类型：
    ![](img/chap3/header_file.JPEG)
+
+  13. 生存周期建议大家参考https://github.com/Sunriseyms/cpp_improve_class/tree/main/cpp_primer/Q%26A/chapter_2/declare_and_definition 好好体会
