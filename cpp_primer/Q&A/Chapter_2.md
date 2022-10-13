@@ -72,4 +72,4 @@
     ![](img/chap2/reference.png)
 
   14. 关于声明和定义：关于声明和定义，大家可以读《C++程序设计语言  第1-3部分》（路径：[/cpp_primer/book/](https://xiaopeng.feishu.cn/drive/folder/fldcnEok30BPHEiFbUd09hcdCTh)）的6.3章节 和15章；这本书是C++之父写的，可以更好的理解背后的设计理念
-   ![](img/chap2/reference.png)
+   ![](img/chap2/define_vs_declare.png)
