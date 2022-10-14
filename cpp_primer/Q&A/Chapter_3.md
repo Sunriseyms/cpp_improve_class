@@ -88,3 +88,7 @@
   iterator begin() {}
   const_iterator begin() const {} // this本身是const，返回const_iterator保护const特性
    ```
+
+  18. char * vs char[]
+   https://www.geeksforgeeks.org/whats-difference-between-char-s-and-char-s-in-c/
+   ![](img/chap3/char_star.png)
