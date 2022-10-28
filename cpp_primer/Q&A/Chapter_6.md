@@ -1,24 +1,26 @@
-### Chapter 4  答疑
+### Chapter 6  答疑
 - 答疑问题
 
 
-  1. 对string 对象或vector对象执行sizeof运算，只返回该类型固定部分的大小，不会计算对象中的元素占用了多少空间
+  1. Q：什么样的函数形参要用值传递？ A：1. 在函数内部对参数变量有所更改，但是不希望这种更改保留到函数外部。2. 基本类型， 如int, float等小于8字节的数据类型的输入参数尽量不用引用传参，因为64位系统下指针为8字节，直接拷贝这样的数据所消耗的资源更少
+  2. assert在debug时候使用，不能出现在release版本中；try语句块可以出现在release版本中。try语句块包含对异常的捕获和处理，有可能不抛出异常，直接继续往下执行，而assert一定会抛出异常
+  3. Q：函数isShorter的返回值类型是否可为constexpr？
+    A：返回值需要为常量或常量表达式，返回值类型才可以是constexpr， 若在编译器能够将变量转换为常量也可以，但是s1.size()和s1.size()无法在编译器就解析为常量
 
    ```
-  template <typename T>
-  struct basic_string {
-      char* begin_;
-      size_t size_;
-      union {
-          size_t capacity_;
-          char sso_buffer[16];
-      };
-  };
-
-  std::string str;
-  sizeof(str) = 32( (8+4+16) = 28 -> 32)
+    bool isShorter(const string &s1, const string &s1) {
+        return s1.size() < s2.size()
    ```
 
-  2. 左值右值的判断方法：能取地址的是左值，不能取地址的是右值
 
-  3. 左值和右值的关系（我看了个知乎的文档还不错，可以参考下）https://zhuanlan.zhihu.com/p/335994370
+  4. 尽管若将42做类型转换为42.0，不会产生精度损失，也不可以使调用f(double, double)比f(int, int)好，因为函数调用时寻找最佳匹配的原则可能是：只要发生类型转换，就认为是等价的，不会进一步去检测精度损失的大小。因此调用这两个函数是等价的。
+
+   ```
+        void f(int, int);
+        void f(double, double = 3.14);
+        f(42, 2.56);  // 将会引发二义性调用报错
+   ```
+
+  5. Core dump的几种可能原因：1. 没有return 2. 索引值超限 3. 多线程的竞争
+
+  6. 理解分离式编译过程：c++采用多文件的组织方式，将不同的功能写到不同的模块内。每一个.cc文件称作一个编译单元，对编译单元进行编译之后生成.o文件，接下来编译器将对象文件链接在一起，生成可执行文件。
