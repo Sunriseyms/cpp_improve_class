@@ -1,2 +1,2 @@
 add_subdirectory(hex)
-# add_subdirectory(caoy)
+add_subdirectory(caoy)
